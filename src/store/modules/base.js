@@ -2,11 +2,10 @@
  * @Author: Leo - [xuebin.me]
  * @Date: 2017-12-29 14:00:07
  * @Last Modified by: Leo
- * @Last Modified time: 2018-05-11 16:15:23
+ * @Last Modified time: 2018-05-11 16:32:47
  */
 
 // import Vue from 'vue'
-import { base } from '../mutation-types'
 
 const state = {
   list: [],

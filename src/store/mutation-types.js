@@ -2,7 +2,7 @@
  * @Author: Leo - xuebin.me 
  * @Date: 2018-05-11 16:11:36 
  * @Last Modified by: Leo
- * @Last Modified time: 2018-05-11 16:12:06
+ * @Last Modified time: 2018-05-11 16:31:37
  */
 let types = {
   ...(r => {
@@ -11,9 +11,11 @@ let types = {
       mutations: {},
       actions: {},
     }
-    // eslint-disable-next-line
-    let res = r.keys().map(key => {
+    r.keys().map(key => {
       let rKey = r(key)
+      console.log('​-----------')
+      console.log('​rKey', rKey, key)
+      console.log('​-----------')
       let newKey = key.replace(/^\.\/modules\/(.*)\.js$/g, '$1')
       let namespaced = rKey.default.namespaced ? `${newKey}/` : ''
       sourceMap.mutations[newKey] = {}
