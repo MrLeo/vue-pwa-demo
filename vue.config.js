@@ -1,17 +1,14 @@
+// github.com/vuejs/vue-cli/blob/dev/docs/config.md
 module.exports = {
-  baseUrl: '/html/statistics/',
+  baseUrl: '/',
+  outputDir: 'docs',
   devServer: {
     open: process.platform === 'darwin',
     host: '0.0.0.0',
     port: 8080,
     https: false,
     hotOnly: false,
-    proxy: {
-      '/c-cp/': {
-        target: 'http://localhost:8100',
-        changeOrigin: true,
-      },
-    },
+    proxy: null,
     before: app => {
       // app is an express instance
     },

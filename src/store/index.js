@@ -2,7 +2,7 @@
  * @Author: Leo - [xuebin.me]
  * @Date: 2017-12-29 13:59:45
  * @Last Modified by: Leo
- * @Last Modified time: 2018-02-24 11:46:11
+ * @Last Modified time: 2018-05-11 16:08:53
  */
 // https://github.com/vuejs/vuex/tree/dev/examples/shopping-cart/store
 
@@ -14,7 +14,6 @@ import actions from './actions'
 import mutations from './mutations'
 
 import base from './modules/base'
-import dive from './modules/dive'
 
 // import createLogger from 'vuex/dist/logger' //vuex内置的Logger日志插件
 const debug = process.env.NODE_ENV !== 'production' // 发布品种时需要用 Webpack 的 DefinePlugin 来转换 process.env.NODE_ENV !== 'production' 的值为 false
@@ -22,7 +21,7 @@ const debug = process.env.NODE_ENV !== 'production' // 发布品种时需要用 
 Vue.use(Vuex)
 
 let state = {
-  refreshRate: ''
+  refreshRate: '',
 }
 
 export default new Vuex.Store({
@@ -32,11 +31,10 @@ export default new Vuex.Store({
   actions,
   modules: {
     base,
-    dive
   },
   strict: debug, // 开发阶段使用
   // plugins: debug ? [createLogger()] : []//vuex插件
-  plugins: [createPersistedState()]
+  plugins: [createPersistedState()],
 })
 
 // 热重载
