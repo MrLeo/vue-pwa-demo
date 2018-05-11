@@ -1,6 +1,6 @@
 // github.com/vuejs/vue-cli/blob/dev/docs/config.md
 module.exports = {
-  baseUrl: '/',
+  baseUrl: '/vue-pwa-demo/',
   outputDir: 'docs',
   devServer: {
     open: process.platform === 'darwin',
